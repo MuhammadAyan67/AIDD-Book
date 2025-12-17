@@ -1,0 +1,163 @@
+/**
+ * CSS for the HomepageHeader component.
+ */
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--ifm-color-primary-dark), var(--ifm-color-secondary-dark)); /* Subtle gradient */
+  color: var(--ifm-font-color-base); /* Ensure text is readable */
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.heroBanner h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: black; /* Ensure title stands out on dark gradient */
+}
+
+.heroBanner p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: black; /* Slightly muted white */
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.buttons .button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: var(--ifm-border-radius);
+  font-size: 1.1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.buttons .button:hover {
+  background-color: black;
+  text-decoration: none;
+  color: white;
+}
+
+/**
+ * CSS for the HomepageContent component.
+ */
+.homepageContent {
+  padding: 4rem 0;
+  background-color: var(--ifm-background-color); /* Use theme background */
+}
+
+.homepageContent h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--ifm-font-color-base);
+}
+
+.homepageContent p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--ifm-font-color-secondary);
+}
+
+.homepageContent ul {
+  list-style-type: none; /* Remove default bullets */
+  padding-left: 0;
+}
+
+.homepageContent ul li {
+  position: relative;
+  padding-left: 1.5em; /* Space for custom bullet */
+  margin-bottom: 0.5em;
+  color: var(--ifm-font-color-base);
+}
+
+.homepageContent ul li::before {
+  content: '🤖'; /* Custom bullet point */
+  position: absolute;
+  left: 0;
+  color: var(--ifm-color-primary);
+  font-size: 1em;
+}
+
+
+
+[data-theme='dark'] .homepageContent h2,
+[data-theme='dark'] .homepageContent p,
+[data-theme='dark'] .homepageContent ul li {
+  color: var(--ifm-font-color-base);
+}
+
+/**
+ * CSS for the BookModules component.
+ */
+.bookModules {
+  padding: 4rem 0;
+  background-color: var(--ifm-background-color);
+}
+
+.bookModules h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  color: var(--ifm-font-color-base);
+}
+
+.bookModuleItem {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: var(--ifm-border-radius);
+  box-shadow: var(--ifm-shadow-md);
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.bookModuleItem:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ifm-shadow-lg);
+  color: black;
+}
+
+.bookModuleItem h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary);
+ 
+}
+
+.bookModuleItem p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ifm-font-color-secondary);
+  flex-grow: 1; /* Allow description to take available space */
+}
+
+.bookModuleButton {
+  margin-top: 1.5rem;
+  align-self: flex-start;
+  color: rgb(193, 193, 243);
+  /* Align button to the start */
+}
+
+.blackText {
+  color: black;
+}
